@@ -1,0 +1,69 @@
+.text {
+    display: flex;
+    width: 285px;
+    text-align: left;
+    height: 62px;
+    vertical-align: -2px;
+  
+    > div {
+      font-size: 0px;
+      opacity: 0;
+      margin-top: -30px;
+      position: absolute;
+  
+      &:nth-child(1) {
+        animation: roll 5s linear infinite 0s;
+      }
+  
+      &:nth-child(2) {
+        animation: roll 5s linear infinite 1s;
+      }
+  
+      &:nth-child(3) {
+        animation: roll 5s linear infinite 2s;
+      }
+  
+      &:nth-child(4) {
+        animation: roll 5s linear infinite 3s;
+      }
+    }
+  }
+  
+  @keyframes roll {
+    0% {
+      font-size: 0px;
+      opacity: 0;
+      margin-top: -30px;
+    }
+  
+    3% {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  
+    5% {
+      font-size: inherit;
+      opacity: 1;
+      margin-top: 0px;
+    }
+  
+    20% {
+      font-size: inherit;
+      opacity: 1;
+      margin-top: 0px;
+    }
+  
+    27% {
+      font-size: 0px;
+      opacity: 0.5;
+      margin-top: 100px;
+    }
+  
+    100% {
+      font-size: 0px;
+      opacity: 0;
+      margin-top: -30px;
+    }
+  }
+  
+  /* fin de la animacion */

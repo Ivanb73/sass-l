@@ -1,0 +1,105 @@
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 285px;
+  text-align: left;
+  height: 62px;
+  vertical-align: -2px;
+}
+
+.text > div {
+  font-size: 0px;
+  opacity: 0;
+  margin-top: -30px;
+  position: absolute;
+}
+
+.text > div:nth-child(1) {
+  -webkit-animation: roll 5s linear infinite 0s;
+          animation: roll 5s linear infinite 0s;
+}
+
+.text > div:nth-child(2) {
+  -webkit-animation: roll 5s linear infinite 1s;
+          animation: roll 5s linear infinite 1s;
+}
+
+.text > div:nth-child(3) {
+  -webkit-animation: roll 5s linear infinite 2s;
+          animation: roll 5s linear infinite 2s;
+}
+
+.text > div:nth-child(4) {
+  -webkit-animation: roll 5s linear infinite 3s;
+          animation: roll 5s linear infinite 3s;
+}
+
+@-webkit-keyframes roll {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-top: -30px;
+  }
+  3% {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-top: 0px;
+  }
+  20% {
+    font-size: inherit;
+    opacity: 1;
+    margin-top: 0px;
+  }
+  27% {
+    font-size: 0px;
+    opacity: 0.5;
+    margin-top: 100px;
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-top: -30px;
+  }
+}
+
+@keyframes roll {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-top: -30px;
+  }
+  3% {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-top: 0px;
+  }
+  20% {
+    font-size: inherit;
+    opacity: 1;
+    margin-top: 0px;
+  }
+  27% {
+    font-size: 0px;
+    opacity: 0.5;
+    margin-top: 100px;
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-top: -30px;
+  }
+}
+
+/* fin de la animacion */
+/*# sourceMappingURL=animation.css.map */
