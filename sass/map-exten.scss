@@ -1,0 +1,42 @@
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+  );
+  
+  @mixin breakpoint($size) {
+    @if map-has-key($breakpoints, $size) {
+      @media (min-width: #{map-get($breakpoints, $size)}) {
+              @content;
+          }
+      }
+  }
+  
+  p{
+    @include breackpoint (xl){
+      font-size: 1.5rem;
+    }
+  }
+
+$blue: #B5E6F5;
+$red: #FFB2AD;
+$yellow: #ADC9EA;
+$green: #D8F0D4;
+
+$colors: map-merge(
+    (
+      “info: $blue,
+      “danger”: $red,
+      “warning”: $yellow,
+      “success: $green,
+    ),
+    $colors
+);
+
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background-color: $value;
+  }
+}
